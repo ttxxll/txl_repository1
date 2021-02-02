@@ -1,7 +1,12 @@
-INSERT INTO au_permission VALUES('010516', '网络区域', 'menu', 'build/index.html#/independent/network-area-manage/list', 'network_region', '0105', NULL, '16', NULL, '01');
-INSERT INTO au_permission VALUES('010517', '业务区域', 'menu', 'build/index.html#/independent/business-area-manage/list', 'business_region', '0105', NULL, '17', NULL, '01');
-INSERT INTO au_permission VALUES
-('01051601', '查看', 'permission', NULL, 'view', '010516', NULL, '01', NULL, '01'),
-('01051602', '编辑', 'permission', NULL, 'edit', '010516', NULL, '02', NULL, '01'),
-('01051701', '查看', 'permission', NULL, 'view', '010517', NULL, '01', NULL, '01'),
-('01051702', '编辑', 'permission', NULL, 'edit', '010517', NULL, '01', NULL, '01');
+用户：006492
+
+#删资产
+nsUpDao.deletePosition(appId,sequenceId);
+#删流程中的机位
+addressDao.updatePositionPro(sequenceId,nsUpApply.getRoom());
+				
+ss_address(机房)						
+rs_rack(机架)					
+ss_asset(设备-在使用机位)
+rs_position(流程中机位)					
+rs_position_in_use(其他使用机位)

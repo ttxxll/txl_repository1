@@ -10,3 +10,12 @@ rs_rack(机架)
 ss_asset(设备-在使用机位)
 rs_position(流程中机位)					
 rs_position_in_use(其他使用机位)
+
+
+feature-zj-0125
+
+
+up_config  网络设备上架：机器与模板的绑定关系
+ss_switch  网络设备上架流程审核结束把机器与模板的绑定关系移到表ss_switch中，下架申请释放机器与模板的关系
+
+网络设备上架 ：asset/shelve，下架申请：asset/offshelve

@@ -19,3 +19,10 @@ up_config  网络设备上架：机器与模板的绑定关系
 ss_switch  网络设备上架流程审核结束把机器与模板的绑定关系移到表ss_switch中，下架申请释放机器与模板的关系
 
 网络设备上架 ：asset/shelve，下架申请：asset/offshelve
+
+
+ALTER TABLE up_config  ADD COLUMN switch_usage VARCHAR(10) DEFAULT NULL COMMENT '交换机用途';
+ALTER TABLE up_config  ADD COLUMN template_id VARCHAR(12) DEFAULT NULL COMMENT '模板id';
+
+
+ALTER TABLE ss_asset  ADD COLUMN ACCESSUSAGE VARCHAR(10) DEFAULT NULL COMMENT '接入用途';
